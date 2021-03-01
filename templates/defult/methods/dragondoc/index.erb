@@ -1,0 +1,4 @@
+<%
+  object.meths.each do |method|
+    next if method.docstring.empty?
+%><%= yieldall object: method %><% end %>

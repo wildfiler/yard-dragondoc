@@ -1,0 +1,5 @@
+  def docs_<%= object.name %>
+    <<-DOCS
+* DOCS: ~<%= object.path %>~
+<%= yieldall %>    DOCS
+  end

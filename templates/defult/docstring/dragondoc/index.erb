@@ -1,0 +1,4 @@
+<%= indent(wrap("Deprecated. #{object.tag(:deprecated).text}")) if object.has_tag?(:deprecated) %>
+<% object.tags(:note).each do |tag| %><%= indent(wrap("Note: #{tag.text}")) %><% end %>
+<%= docstring_text.strip %>
+

@@ -1,0 +1,9 @@
+<% unless object.docstring.empty? %>
+  def docs_class
+    <<-DOCS
+* DOCS: ~<%= object.path %>~
+
+<%= yield %>
+    DOCS
+  end
+<% end %>

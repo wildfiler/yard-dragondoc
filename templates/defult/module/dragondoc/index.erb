@@ -1,0 +1,8 @@
+
+<% unless object.docstring.empty? && object.meths.all? {|meth| meth.docstring.empty?}%>
+module <%= object.path %>Docs
+<%= yieldall %>
+end
+<%= object.path %>.extend Docs
+<%= object.path %>.extend <%= object.path %>Docs
+<% end %>
